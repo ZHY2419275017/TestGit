@@ -22,6 +22,7 @@ public class Demo {
 		String strUtilDate = sdf.format(sqlDate);
 		System.out.println("strUtilDate:" + strUtilDate);*/
 		
+		//BigDecimal数据类型测试
 		double d1= 0.02;
 		double d2= 0.03;
 		System.out.println(d2+d1);
@@ -35,6 +36,11 @@ public class Demo {
 		System.out.println(BigDecimal.ONE);
 		System.out.println(money1.compareTo(BigDecimal.ONE)==0);
 		System.out.println(money1.setScale(2, BigDecimal.ROUND_HALF_UP));
+		
+		
+		
+		
+		
 		
 
 	}
