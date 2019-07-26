@@ -19,17 +19,23 @@ public class DateCompare {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if(beforeUtilDate.before(afterUtilDate)){
+		int flag = beforeUtilDate.compareTo(afterUtilDate);
+		if(flag == 0){
+			System.out.println("两个日期相等");
+			return false;
+		}else if(flag < 0){
 			System.out.println("前一个日期比后一个日期早！");
 			return true;
-		}else{
+		}else if( flag>0){
 			System.out.println("前一个日期比后一个日期晚！");
+			return false;
+		}else{
 			return false;
 		}
 		
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(dateCompareMethod("2019-07-29","2019-07-26"));
+		System.out.println(dateCompareMethod("2019-07-21","2019-07-29"));
 	}
 }
